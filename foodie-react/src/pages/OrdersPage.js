@@ -20,7 +20,7 @@ class OrdersPage extends Component {
   }
 
   componentDidMount() {
-    this.fetchRestaurantDetails(this.props.id);
+    this.fetchRestaurantDetails(this.props.match.params.id);
   }
 
   /**

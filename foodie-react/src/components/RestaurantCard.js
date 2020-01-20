@@ -11,7 +11,12 @@ export class RestaurantCard extends Component {
 
   render() {
     return (
-      <div className="restaurant-card">
+      <div
+        className="restaurant-card"
+        onClick={() =>
+          this.props.history.push("/orders/" + this.props.restaurant.id)
+        }
+      >
         <img
           className="restaurant-logo"
           src={

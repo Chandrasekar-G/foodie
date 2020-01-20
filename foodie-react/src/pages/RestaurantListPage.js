@@ -50,7 +50,11 @@ export class RestaurantListPage extends Component {
           {this.state.data.map(res => {
             return (
               <div>
-                <RestaurantCard key={res.id} restaurant={res} />
+                <RestaurantCard
+                  key={res.id}
+                  restaurant={res}
+                  history={this.props.history}
+                />
               </div>
             );
           })}

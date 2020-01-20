@@ -46,7 +46,12 @@ export default class LoginPage extends React.Component {
               />
             </div>
             <div className="form-field">
-              <CommonButton className="primary" type="submit" value="LOGIN" />
+              <CommonButton
+                className="primary"
+                type="submit"
+                value="LOGIN"
+                onClick={() => this.props.history.push("/restaurantList")}
+              />
             </div>
             <span className="forgot-password">Forgot Password?</span>
             <a className="link" href="">
