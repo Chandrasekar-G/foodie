@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="./resources/css/all.min.css" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='./resources/css/styles.css'>
+    <script src="./resources/js/main.js"></script>
     <title>Foodie</title>
 </head>
 
@@ -82,11 +83,11 @@
                         <div class="item-content">
                             <div class="content-left spinner">
                                 <span>
-                                    <button>-</button>
+                                    <button onclick="decrement(event,'item0')">-</button>
                                 </span>
                                 <span><input type="text" id="item0" value="1" /></span>
                                 <span>
-                                    <button>+</button>
+                                    <button onclick="increment(event,'item0')">+</button>
                                 </span>
                             </div>
                             <div class="content-right cost">
@@ -102,11 +103,11 @@
                         <div class="item-content">
                             <div class="content-left spinner">
                                 <span>
-                                    <button>-</button>
+                                    <button onclick="decrement(event,'item1')">-</button>
                                 </span>
                                 <span><input type="text" id="item1" value="1" /></span>
                                 <span>
-                                    <button>+</button>
+                                    <button onclick="increment(event,'item1')">+</button>
                                 </span>
                             </div>
                             <div class="content-right cost">
