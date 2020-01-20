@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
-import LoginPage from "./pages/LoginPage";
+import RestaurantListPage from "./pages/RestaurantListPage";
 
 function App() {
-  return <LoginPage />;
+  return <RestaurantListPage />;
 }
 
 export default App;
