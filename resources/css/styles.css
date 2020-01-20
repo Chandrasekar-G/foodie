@@ -15,6 +15,11 @@ img {
   max-width: 100%;
 }
 
+.child {
+  width: 80%;
+  margin: 0 auto;
+}
+
 /* END - COMMON STYLES */
 
 /* START --  LOGIN STYLES */
@@ -77,3 +82,27 @@ img {
 }
 
 /* END --  LOGIN STYLES */
+
+/* START --  HEADER STYLES */
+.header {
+  background: #bd031a;
+  color: #ffffff;
+  width: 100vw;
+}
+
+.header-content {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  height: 50px;
+}
+
+.user-icon {
+  font-size: 25px;
+  margin-left: 5px;
+}
+/* END --  HEADER STYLES */
