@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../styles/restaurantListPageStyles.css";
 import HeaderBar from "../components/HeaderBar";
 import { RestaurantService } from "../services/RestaurantService";
+import RestaurantCard from "../components/RestaurantCard";
 
 export class RestaurantListPage extends Component {
   constructor(props) {
@@ -26,7 +27,11 @@ export class RestaurantListPage extends Component {
     this.setState({ isLoading: true });
     let restaurantsList = await RestaurantService.getRestaurantsList();
     if (restaurantsList.length > 0) {
-      this.setState({ isLoading: false, data: restaurantsList, error: null });
+      this.setState({
+        isLoading: false,
+        data: restaurantsList,
+        error: null
+      });
       console.log(this.state);
     } else {
       this.setState({
@@ -41,6 +46,15 @@ export class RestaurantListPage extends Component {
     return (
       <div className="restaurant-list-container">
         <HeaderBar />
+        <div className="restaurant-list-wrapper child">
+          {this.state.data.map(res => {
+            return (
+              <div>
+                <RestaurantCard key={res.id} restaurant={res} />
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }
